@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import PageObjects.LandingPage;
 import PageObjects.PageObjectManager;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -54,6 +55,14 @@ public void user_searched_with_username_and_extracted_actual_name_of_product(Str
     
 }
 
+
+@And("^Added \"([^\"]*)\" items of the selected product to cart$")
+public void added_something_items_of_the_selected_product_to_cart(String product_count) throws Throwable {
+    
+	lpobj.increaseproduct(Integer.parseInt(product_count));
+	
+	lpobj.add_product_to_Cart();
+}
 
 
 }

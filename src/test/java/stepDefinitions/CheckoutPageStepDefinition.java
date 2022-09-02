@@ -35,7 +35,7 @@ public CheckoutPageStepDefinition(TestContainerSetup testContext) {
 @Then("^User proceeds to Checkout and validate the (.+) items in checkout page$")
 public void user_proceeds_to_checkout_and_validate_the_items_in_checkout_page(String productname) throws Throwable {
 
-	
+chkoutobj.opencart_and_checkout_items();	
 	
 	
 }
